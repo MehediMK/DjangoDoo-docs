@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://github.com/MehediMK/DjangoDoo-docs/getting-started/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Getting Started - DjangoDoo</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">DjangoDoo</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Getting Started</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../modules/" class="nav-link">Modules Guide</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../contributing/" class="nav-link">Contributing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../faq/" class="nav-link">FAQ</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href=".." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../modules/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#getting-started-with-djangodoo" class="nav-link">🚀 Getting Started with DjangoDoo</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#prerequisites" class="nav-link">🔥 Prerequisites</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#step-1-clone-the-repository" class="nav-link">📥 Step 1: Clone the Repository</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#step-2-set-up-a-virtual-environment" class="nav-link">🏗 Step 2: Set Up a Virtual Environment</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#step-3-install-dependencies" class="nav-link">📦 Step 3: Install Dependencies</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#step-4-configure-the-database" class="nav-link">🛠 Step 4: Configure the Database</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#step-5-run-migrations" class="nav-link">🔄 Step 5: Run Migrations</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#step-6-start-the-development-server" class="nav-link">🚀 Step 6: Start the Development Server</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#step-7-create-a-superuser" class="nav-link">🔑 Step 7: Create a Superuser</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#step-8-understanding-the-project-structure" class="nav-link">🎯 Step 8: Understanding the Project Structure</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#step-9-running-tests" class="nav-link">🛠 Step 9: Running Tests</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#step-10-running-celery-for-asynchronous-tasks-optional" class="nav-link">🔧 Step 10: Running Celery for Asynchronous Tasks (Optional)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#next-steps" class="nav-link">🌟 Next Steps</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#need-help" class="nav-link">❓ Need Help?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#happy-coding-with-djangodoo" class="nav-link">🚀 Happy Coding with DjangoDoo! 🚀</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="getting-started-with-djangodoo">🚀 Getting Started with DjangoDoo</h1>
+<p>Welcome to <strong>DjangoDoo</strong>, an open-source <strong>modular</strong> application framework built using Django, inspired by Odoo 17. This guide will help you set up DjangoDoo on your local machine and get started with development.  </p>
+<hr />
+<h2 id="prerequisites">🔥 Prerequisites</h2>
+<p>Before you start, ensure you have the following installed on your system:  </p>
+<p>✅ <strong>Python 3.10+</strong> - <a href="https://www.python.org/downloads/">Download Python</a><br />
+✅ <strong>Git</strong> - <a href="https://git-scm.com/downloads">Download Git</a><br />
+✅ <strong>PostgreSQL (Recommended)</strong> - <a href="https://www.postgresql.org/download/">Download PostgreSQL</a><br />
+✅ <strong>Virtual Environment (venv)</strong> - Built into Python<br />
+✅ <strong>Django &amp; Dependencies</strong> - Installed via <code>pip</code>  </p>
+<hr />
+<h2 id="step-1-clone-the-repository">📥 Step 1: Clone the Repository</h2>
+<p>First, clone the <strong>DjangoDoo</strong> repository from GitHub:  </p>
+<pre><code class="language-bash">git clone https://github.com/MehediMK/djangodoo.git
+cd djangodoo
+</code></pre>
+<hr />
+<h2 id="step-2-set-up-a-virtual-environment">🏗 Step 2: Set Up a Virtual Environment</h2>
+<p>Create a virtual environment to manage dependencies:  </p>
+<pre><code class="language-bash">python -m venv venv
+</code></pre>
+<p>Activate the virtual environment:  </p>
+<pre><code class="language-bash"># On macOS/Linux
+source venv/bin/activate
+
+# On Windows
+venv\Scripts\activate
+</code></pre>
+<hr />
+<h2 id="step-3-install-dependencies">📦 Step 3: Install Dependencies</h2>
+<p>Install all required packages using <code>pip</code>:  </p>
+<pre><code class="language-bash">pip install -r requirements.txt
+</code></pre>
+<p>Ensure that Django is installed:  </p>
+<pre><code class="language-bash">python -m django --version
+</code></pre>
+<hr />
+<h2 id="step-4-configure-the-database">🛠 Step 4: Configure the Database</h2>
+<p>By default, DjangoDoo uses <strong>SQLite</strong>, but for production, PostgreSQL is recommended.  </p>
+<h3 id="using-sqlite-default"><strong>Using SQLite (Default)</strong></h3>
+<p>No additional configuration is required.  </p>
+<h3 id="using-postgresql"><strong>Using PostgreSQL</strong></h3>
+<ol>
+<li>Create a PostgreSQL database:<br />
+<code>sql
+   CREATE DATABASE djangodoo;</code></li>
+<li>Update <strong><code>settings.py</code></strong> to configure PostgreSQL:  </li>
+</ol>
+<pre><code class="language-python">DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'djangodoo',
+        'USER': 'your_username',
+        'PASSWORD': 'your_password',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
+}
+</code></pre>
+<hr />
+<h2 id="step-5-run-migrations">🔄 Step 5: Run Migrations</h2>
+<p>Apply database migrations:  </p>
+<pre><code class="language-bash">python manage.py migrate
+</code></pre>
+<p>If using PostgreSQL, ensure you have created the database before running this command.</p>
+<hr />
+<h2 id="step-6-start-the-development-server">🚀 Step 6: Start the Development Server</h2>
+<p>Run the Django server:  </p>
+<pre><code class="language-bash">python manage.py runserver
+</code></pre>
+<p>By default, the server starts at <strong><code>http://127.0.0.1:8000/</code></strong>. Open it in your browser to verify the setup.  </p>
+<hr />
+<h2 id="step-7-create-a-superuser">🔑 Step 7: Create a Superuser</h2>
+<p>To access the <strong>Django Admin Panel</strong>, create a superuser:  </p>
+<pre><code class="language-bash">python manage.py createsuperuser
+</code></pre>
+<p>Follow the prompts to set up an admin username and password.  </p>
+<p>Once done, visit <strong><code>http://127.0.0.1:8000/admin/</code></strong> and log in.</p>
+<hr />
+<h2 id="step-8-understanding-the-project-structure">🎯 Step 8: Understanding the Project Structure</h2>
+<p>DjangoDoo follows a <strong>modular</strong> structure where each feature is an independent module.  </p>
+<pre><code>djangodoo/
+│── djangodoo/             # Core framework functionality
+│   ├── ...                # All DjangoDoo files exists here.
+│── modules/               # All independent feature modules
+│   ├── sales/             # Example module (Sales Management)
+│   ├── inventory/         # Example module (Inventory Management)
+│── templates/             # Shared templates for frontend
+│── static/                # Static files (CSS, JS, Images)
+│── api/                   # API endpoints for REST support
+│── settings.py            # Django settings file
+│── manage.py              # Django management script
+</code></pre>
+<p>Each module inside <code>modules/</code> is <strong>self-contained</strong>, with its own models, views, templates, and API endpoints.</p>
+<hr />
+<h2 id="step-9-running-tests">🛠 Step 9: Running Tests</h2>
+<p>To ensure everything is working properly, run the test suite:  </p>
+<pre><code class="language-bash">python manage.py test
+</code></pre>
+<hr />
+<h2 id="step-10-running-celery-for-asynchronous-tasks-optional">🔧 Step 10: Running Celery for Asynchronous Tasks (Optional)</h2>
+<p>If the project requires asynchronous task processing with <strong>Celery</strong>, start the Celery worker:  </p>
+<pre><code class="language-bash">celery -A djangodoo worker --loglevel=info
+</code></pre>
+<hr />
+<h2 id="next-steps">🌟 Next Steps</h2>
+<p>Now that DjangoDoo is set up, explore its features:  </p>
+<p>📌 <a href="../modules/">Creating a New Module</a><br />
+📌 <a href="views-models.md">Understanding Views &amp; Models</a><br />
+📌 <a href="api.md">Using APIs</a>  </p>
+<hr />
+<h2 id="need-help">❓ Need Help?</h2>
+<p>For support, check our <strong>GitHub Discussions</strong> or join the <strong>DjangoDoo Community</strong>.  </p>
+<p>🔗 <strong>GitHub:</strong> <a href="https://github.com/MehediMK/djangodoo">DjangoDoo Repository</a><br />
+🔗 <strong>Join Discord:</strong> <a href="#">DjangoDoo Community</a>  </p>
+<h2 id="happy-coding-with-djangodoo">🚀 Happy Coding with <strong>DjangoDoo</strong>! 🚀</h2></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2024 - 2025 MehediMK(DjangoDoo)</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

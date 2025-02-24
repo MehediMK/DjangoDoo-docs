@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="light">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://github.com/MehediMK/DjangoDoo-docs/modules/">
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Modules Guide - DjangoDoo</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../css/brands.min.css" rel="stylesheet">
+        <link href="../css/solid.min.css" rel="stylesheet">
+        <link href="../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" >
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" disabled>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">DjangoDoo</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../getting-started/" class="nav-link">Getting Started</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="./" class="nav-link active" aria-current="page">Modules Guide</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../contributing/" class="nav-link">Contributing</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="../faq/" class="nav-link">FAQ</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../getting-started/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" href="../contributing/" class="nav-link">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#djangodoo-modules-guide" class="nav-link">📦 DjangoDoo Modules Guide</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#what-is-a-module" class="nav-link">🚀 What is a Module?</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#module-directory-structure" class="nav-link">📂 Module Directory Structure</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#how-to-create-a-new-module" class="nav-link">🔨 How to Create a New Module</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#dynamic-module-loading" class="nav-link">🛠 Dynamic Module Loading</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#next-steps" class="nav-link">📢 Next Steps</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="djangodoo-modules-guide">📦 DjangoDoo Modules Guide</h1>
+<p>DjangoDoo is a <strong>modular</strong> framework built using Django, allowing you to create independent <strong>feature modules</strong> similar to Odoo. Each module has its own models, views, templates, and API endpoints while seamlessly integrating into the core system.  </p>
+<hr />
+<h2 id="what-is-a-module">🚀 What is a Module?</h2>
+<p>A <strong>module</strong> in DjangoDoo is a self-contained application that extends the core functionality. It can be enabled or disabled dynamically without affecting the entire system.  </p>
+<p>Each module can include:<br />
+✔ <strong>Models</strong> – Define database tables<br />
+✔ <strong>Views</strong> – Handle HTTP requests<br />
+✔ <strong>Templates</strong> – Frontend HTML pages<br />
+✔ <strong>Static Files</strong> – CSS, JS, images<br />
+✔ <strong>API Endpoints</strong> – RESTful APIs (optional)  </p>
+<hr />
+<h2 id="module-directory-structure">📂 Module Directory Structure</h2>
+<p>Each module is stored inside the <code>modules/</code> directory:  </p>
+<pre><code>djangodoo/
+│── djangodoo/                 # Core framework functionality
+│   ├── ...                    # All DjangoDoo files exists here.
+│── ├── settings.py            # Django settings file
+│── modules/                   # All independent feature modules
+│   ├── sales/                 # Example module (Sales Management)
+│   │   ├── models.py          # Database models
+│   │   ├── views.py           # Business logic &amp; controllers
+│   │   ├── urls.py            # URL routing
+│   │   ├── templates/sales/   # Frontend templates
+│   │   ├── static/sales/      # Static assets (CSS, JS, images)
+│   │   ├── api.py             # REST API endpoints (optional)
+│   │   ├── __init__.py        # Module initialization
+│   │   ├── admin.py           # Django Admin integration
+│   │   ├── forms.py           # Django Forms (if needed)
+│   │   ├── tests.py           # Unit tests for the module
+│── manage.py                  # Django management script
+</code></pre>
+<hr />
+<h2 id="how-to-create-a-new-module">🔨 How to Create a New Module</h2>
+<h3 id="step-1-create-a-module-directory"><strong>Step 1: Create a Module Directory</strong></h3>
+<p>Navigate to the <code>modules/</code> directory and create a new module:  </p>
+<pre><code class="language-bash">cd modules/
+mkdir inventory
+cd inventory
+touch __init__.py models.py views.py urls.py api.py admin.py forms.py tests.py
+mkdir templates/inventory static/inventory
+</code></pre>
+<hr />
+<h3 id="step-2-define-models-modelspy"><strong>Step 2: Define Models (<code>models.py</code>)</strong></h3>
+<p>Create your database models inside <code>models.py</code>:  </p>
+<pre><code class="language-python">from django.db import models
+
+class Product(models.Model):
+    name = models.CharField(max_length=255)
+    price = models.DecimalField(max_digits=10, decimal_places=2)
+    stock = models.IntegerField()
+
+    def __str__(self):
+        return self.name
+</code></pre>
+<p>Run migrations to apply database changes:  </p>
+<pre><code class="language-bash">python manage.py makemigrations inventory
+python manage.py migrate
+</code></pre>
+<hr />
+<h3 id="step-3-create-views-viewspy"><strong>Step 3: Create Views (<code>views.py</code>)</strong></h3>
+<p>Define business logic and render templates:  </p>
+<pre><code class="language-python">from django.shortcuts import render
+from .models import Product
+
+def product_list(request):
+    products = Product.objects.all()
+    return render(request, &quot;inventory/product_list.html&quot;, {&quot;products&quot;: products})
+</code></pre>
+<hr />
+<h3 id="step-4-define-url-routing-urlspy"><strong>Step 4: Define URL Routing (<code>urls.py</code>)</strong></h3>
+<p>Connect your views to Django’s URL system:  </p>
+<pre><code class="language-python">from django.urls import path
+from .views import product_list
+
+urlpatterns = [
+    path('products/', product_list, name=&quot;product_list&quot;),
+]
+</code></pre>
+<p>Include this module in the project's main <code>urls.py</code>:  </p>
+<pre><code class="language-python">from django.urls import include, path
+
+urlpatterns = [
+    path('inventory/', include('modules.inventory.urls')),
+]
+</code></pre>
+<hr />
+<h3 id="step-5-create-templates-templatesinventoryproduct_listhtml"><strong>Step 5: Create Templates (<code>templates/inventory/product_list.html</code>)</strong></h3>
+<p>Define an HTML template for the module:  </p>
+<pre><code class="language-html">{% extends 'base.html' %}
+{% block content %}
+    &lt;h1&gt;Product List&lt;/h1&gt;
+    &lt;ul&gt;
+        {% for product in products %}
+            &lt;li&gt;{{ product.name }} - ${{ product.price }}&lt;/li&gt;
+        {% endfor %}
+    &lt;/ul&gt;
+{% endblock %}
+</code></pre>
+<hr />
+<h3 id="step-6-register-the-module-in-django-admin-adminpy"><strong>Step 6: Register the Module in Django Admin (<code>admin.py</code>)</strong></h3>
+<pre><code class="language-python">from django.contrib import admin
+from .models import Product
+
+admin.site.register(Product)
+</code></pre>
+<p>Now, run the Django development server:  </p>
+<pre><code class="language-bash">python manage.py runserver
+</code></pre>
+<p>Visit <strong><code>http://127.0.0.1:8000/inventory/products/</code></strong> to see the module in action.</p>
+<hr />
+<h2 id="dynamic-module-loading">🛠 Dynamic Module Loading</h2>
+<p>DjangoDoo supports <strong>dynamic module activation/deactivation</strong>. To register a new module, add it to <code>INSTALLED_APPS</code> dynamically in <code>settings.py</code>:</p>
+<pre><code class="language-python">import os
+
+INSTALLED_APPS += [
+    app for app in os.listdir(&quot;modules&quot;) if os.path.isdir(os.path.join(&quot;modules&quot;, app))
+]
+</code></pre>
+<p>This ensures that any new module added to <code>modules/</code> is <strong>automatically loaded</strong>.</p>
+<hr />
+<h2 id="next-steps">📢 Next Steps</h2>
+<p>📌 <a href="views-models.md">Understanding Views &amp; Models</a>
+📌 <a href="graph-kanban.md">Working with Graph &amp; Kanban Views</a>  </p>
+<p>For more details, check our <strong>GitHub Repository</strong>. 🚀  </p>
+<p>🔗 <strong>GitHub:</strong> <a href="https://github.com/MehediMK/djangodoo">DjangoDoo Repository</a><br />
+🔗 <strong>Join Discord:</strong> <a href="#">DjangoDoo Community</a>  </p>
+<hr /></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+                <p>Copyright &copy; 2024 - 2025 MehediMK(DjangoDoo)</p>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
