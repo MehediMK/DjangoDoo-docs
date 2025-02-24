@@ -1,0 +1,17 @@
+site_name: DjangoDoo
+site_url: https://github.com/MehediMK/DjangoDoo-docs
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Modules Guide: modules.md
+  - Contributing: contributing.md
+  - FAQ: faq.md
+
+# theme:
+#   name: material
+
+extra:
+  version: 0.0.1
+
+copyright: Copyright &copy; 2024 - 2025 MehediMK(DjangoDoo)
