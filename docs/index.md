@@ -101,4 +101,3 @@ DjangoDoo is an **open-source project**, and we welcome contributions!
 🔗 **Join the Discord Community:** [DjangoDoo Discord](https://discord.gg/9amZCkFD)  
 
 🚀 **Let's build the next-gen modular Django framework together!** 🚀
-```

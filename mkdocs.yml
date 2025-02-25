@@ -1,5 +1,7 @@
 site_name: DjangoDoo
 site_url: https://github.com/MehediMK/DjangoDoo-docs
+repo_name: 'DjangoDoo-docs'
+site_author: 'Mehedi Khan'
 
 nav:
   - Home: index.md
@@ -7,9 +9,34 @@ nav:
   - Modules Guide: modules.md
   - Contributing: contributing.md
   - FAQ: faq.md
+  - 🐧: https://github.com/MehediMK/djangodoo
 
-# theme:
-#   name: material
+theme:
+  name: mkdocs
+  nav_style: danger
+  sticky_navigation: True
+
+  analytics:
+    gtag: G-R8QSGZSXY6
+    anonymize_ip: True
+  
+  highlightjs: true
+  hljs_languages:
+    - yaml
+    - rust
+
+  shortcuts:
+    help: 191    # ?
+    next: 78     # n
+    previous: 80 # p
+    search: 83   # s
+
+  color_mode: auto
+  user_color_mode_toggle: true
+
+plugins:
+  - search:
+      indexing: 'full'
 
 extra:
   version: 0.0.1
