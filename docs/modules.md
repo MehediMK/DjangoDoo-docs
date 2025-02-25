@@ -177,11 +177,6 @@ This ensures that any new module added to `modules/` is **automatically loaded**
 
 ---
 
-## 📢 Next Steps  
-
-📌 [Understanding Views & Models](views-models.md)
-📌 [Working with Graph & Kanban Views](graph-kanban.md)  
-
 For more details, check our **GitHub Repository**. 🚀  
 
 🔗 **GitHub:** [DjangoDoo Repository](https://github.com/MehediMK/djangodoo)  

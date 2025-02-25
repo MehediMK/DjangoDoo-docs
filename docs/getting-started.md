@@ -176,9 +176,7 @@ celery -A djangodoo worker --loglevel=info
 
 Now that DjangoDoo is set up, explore its features:  
 
-📌 [Creating a New Module](modules.md)  
-📌 [Understanding Views & Models](views-models.md)  
-📌 [Using APIs](api.md)  
+📌 [Creating a New Module](modules.md)
 
 ---
 
