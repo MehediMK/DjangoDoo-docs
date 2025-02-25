@@ -1,7 +1,10 @@
 # 📖 DjangoDoo Documentation  
 
-Welcome to the **DjangoDoo-Docs** repository! This project provides comprehensive documentation for **DjangoDoo**, a modular and extensible application framework built with **Django**, inspired by Odoo 17.
+Welcome to the **DjangoDoo-Docs** repository! This project provides comprehensive documentation for **DjangoDoo**, a modular and extensible application framework built with **Django**, inspired by Odoo.
 
+---
+- [🚀 **Live Documentation URL**](https://mehedimk.github.io/DjangoDoo-docs/)
+- [📦 **DjangoDoo Project URL**](https://github.com/MehediMK/djangodoo)
 ---
 
 ## 🚀 About DjangoDoo  
@@ -22,8 +25,6 @@ Check out the **[DjangoDoo GitHub Repository](https://github.com/MehediMK/django
 
 This repository contains the **official documentation** for DjangoDoo, built using **MkDocs**. It helps users and contributors understand DjangoDoo's architecture, features, and how to get started.  
 
-🔹 **Live Documentation:** [Coming Soon]  
-🔹 **Built with:** [MkDocs](https://www.mkdocs.org/)  
 
 ### 📂 Documentation Structure  
 
@@ -95,7 +96,7 @@ DjangoDoo-Docs is open-source and licensed under the **MIT License**.
 
 💬 **GitHub Discussions** (Coming Soon)  
 📢 Follow us on **LinkedIn & Twitter**  
-📧 Contact: [GitHub Issues](https://github.com/MehediMK/djangodoo-docs/issues)  
+📧 Contact: [DjangoDoo GitHub Issues](https://github.com/MehediMK/djangodoo/issues)  
 
 **If you like this project, don't forget to ⭐ star the repository!**  
 ```
