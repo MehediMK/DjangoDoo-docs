@@ -1,3 +1,4 @@
+site: https://mehedimk.github.io/DjangoDoo-docs/
 site_name: DjangoDoo
 site_url: https://github.com/MehediMK/DjangoDoo-docs
 repo_name: 'DjangoDoo-docs'
@@ -40,9 +41,18 @@ theme:
 
 plugins:
   - search:
+      enabled: true
       indexing: 'full'
-
+  - sitemap:
+      changefreq: daily
+      priority: 0.5
+      
+extra_javascript:
+  - https://cse.google.com/cse.js?cx=f42d853d7ccae4a09
+  
 extra:
+  search:
+    provider: google
   version: 0.0.1
   generator: false
 
